@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <header>
+            <span class="City">上海</span>
+            <h1>假日旅行</h1>
+        </header>
+        <div class="swiper-container banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="javascript:;"><img src="./images/1.jpg" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;"><img src="./images/2.jpg" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;"><img src="./images/3.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="swiper-pagination bannerPage"></div>
+        </div>
+        <div class="wrapMenuList">
+            <div class="menuScroll">
+                <p class="pullDown pull">下拉刷新</p>
+                <div class="menuList">
+                    <!-- <dl>
+                        <a href="javascript:;">
+                            <dt>
+                                <img src="./images/index_0.jpg" alt="">
+                            </dt>
+                            <dd>
+                                <h2>酒店名称</h2>
+                                <p>
+                                    <span class="tag">限时抢购</span>
+                                    <span class="price"><b>268</b> 起</span>
+                                </p>
+                                <p>
+                                    <span class="scroe">4.3</span>
+                                    <span class="start">中档型</spann>
+                                        <i class="iconfont icon-Wifi"></i>
+                                        <i class="iconfont icon-tingchechang"></i>
+                                </p>
+                                <p>
+                                    <span class="address">首都机场，新国展</span>
+                                    <span class="dicetance">23.2公里</span>
+                                </p>
+                            </dd>
+                        </a>
+                    </dl> -->
+                </div>
+                <p class="pullUp pull">上拉加载</p>
+            </div>
+        </div>
+
+        <!-- 地址列表页 -->
+        <div class="wrapperPage">
+            <header>
+                <span class="close">&lt;</span>
+                <h2>假日旅行</h2>
+            </header>
+            <div class="search">
+                <input type="text" placeholder="输入城市名（如北京、bj、beijing）">
+            </div>
+            <section>
+                <div class="city_Content">
+                    <h2>当前城市</h2>
+                    <p class="posC">正在定位...</p>
+                    <!-- betterScroll  要操作的元素 -->
+                    <ul class="cityScroll">
+                        <!-- 要滚动的内容 -->
+                        <div class="contentCity">
+
+                            <!-- <li>
+                                <h2>A</h2>
+                                
+                                <ol>
+                                    <li>阿坝</li>
+                                    <li>阿克苏</li>
+                                    <li>阿拉善</li>
+                                </ol>
+                            </li> -->
+                        </div>
+                    </ul>
+                </div>
+                <div class="city_menu">
+                    <ul class="cityDuce">
+
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./js/data/city.js"></script>
+    <script src="./js/data/data.js"></script>
+    <script src="./js/libs/bScroll.js"></script>
+    <script src="./js/libs/swiper.min.js"></script>
+    <script src="./js/libs/flexible.js"></script>
+    <script src="./js/app/home.js"></script>
+    <script>
+        var aim = [{
+            name: 'Anne',
+            age: 23,
+            gender: 'female'
+        }, {
+            name: 'Leila',
+            age: 16,
+            gender: 'female'
+        }, {
+            name: 'Jay',
+            age: 23,
+            gender: 'male'
+        }, {
+            name: 'Mark',
+            age: 40,
+            gender: 'male'
+        }];
+
+        function comFilter(array, name, name1) {
+            var model = array.filter(function(item) {
+                return item.name === name || item.gender === name1;
+            });
+
+            return model;
+        }
+
+        console.log(comFilter(aim, "Anne", "female"))
+    </script>
+</body>
+
+</html>

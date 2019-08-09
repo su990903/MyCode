@@ -1,0 +1,194 @@
+@import "./reset.scss";
+@import "./common.scss";
+@import "./iconfont.scss";
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    @include comNum(100%, 100%);
+    @include flex(column);
+    position: relative;
+}
+
+header {
+    @include comNum(100%, px2rem(45px));
+    background: #47d265;
+    @include flex();
+    align-items: center;
+    position: relative;
+    padding: 0 px2rem(10px);
+    color: #fff;
+    h1 {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: px2rem(18px);
+    }
+}
+
+.banner {
+    width: 100%;
+    height: px2rem(144px);
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bannerPage {
+        bottom: 0!important;
+        span {
+            width: calc(100%/3);
+            height: px2rem(8px);
+            border-radius: 0;
+            margin: 0!important;
+            opacity: 1;
+            background: #ccc;
+        }
+        span.swiper-pagination-bullet-active {
+            background: orange;
+        }
+    }
+}
+
+.wrapMenuList {
+    @include comNum();
+    flex: 1;
+    //overflow: auto;
+    .menuScroll {
+        width: 100%;
+        position: relative;
+    }
+}
+
+.pull {
+    width: 100%;
+    height: px2rem(40px);
+    background: #666;
+    line-height: px2rem(40px);
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.pullDown {
+    top: px2rem(-40px);
+}
+
+.pullUp {
+    bottom: px2rem(-40px);
+}
+
+.menuList {
+    @include comNum(100%, auto);
+    dl {
+        @include comNum(100%, auto);
+        border-bottom: solid 1px #ccc;
+        padding: px2rem(10px);
+        a {
+            display: flex;
+            color: #333;
+            dt {
+                width: px2rem(100px);
+                height: auto;
+                margin-right: px2rem(15px);
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+//地址列表页
+.wrapperPage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 99;
+    transform: translate(-100%, 0);
+    transition: .4s;
+    header {
+        h2 {
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%, 0);
+            font-size: px2rem(18px);
+        }
+    }
+}
+
+.search {
+    padding: px2rem(10px);
+    background: #ccc;
+    @include flex();
+    input {
+        height: px2rem(40px);
+        border: solid 1px #666;
+        line-height: px2rem(40px);
+        background: #fff;
+        flex: 1;
+        border-radius: px2rem(5px);
+        text-indent: px2rem(12px);
+    }
+}
+
+section {
+    @include comNum(100%, 100%);
+    @include flex();
+    flex: 1;
+}
+
+.city_Content {
+    width: 100%;
+    @include flex(column);
+    ul {
+        @include comNum(100%, auto);
+        flex: 1;
+    }
+    h2 {
+        height: px2rem(30px);
+        line-height: px2rem(30px);
+        padding: 0 px2rem(16px);
+        background: #cecece;
+        font-size: px2rem(16px);
+    }
+    p {
+        height: px2rem(40px);
+        line-height: px2rem(40px);
+        padding: 0 px2rem(20px);
+        font-size: px2rem(16px);
+    }
+    ol {
+        padding-left: px2rem(10px);
+    }
+    ol>li {
+        border-bottom: 1px solid #aeaeae;
+        height: px2rem(40px);
+        line-height: px2rem(40px);
+        font-size: px2rem(16px);
+        &.active {
+            color: green;
+        }
+    }
+}
+
+.city_menu {
+    padding: px2rem(10px);
+    li {
+        width: 100%;
+        height: px2rem(22px);
+        line-height: px2rem(22px);
+        text-align: center;
+        color: #49d060;
+        font-size: px2rem(16px);
+    }
+}

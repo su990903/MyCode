@@ -1,0 +1,20 @@
+body {
+    background: #fff;
+    color: #333;
+}
+
+@mixin comNum($w:100%, $h:auto) {
+    width: $w;
+    height: $h;
+    overflow: hidden;
+}
+
+@mixin flex($val:row) {
+    display: flex;
+    flex-direction: $val;
+}
+
+$base-font-size:37.5px!default;
+@function px2rem($val) {
+    @return $val / $base-font-size * 1rem;
+}
